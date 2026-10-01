@@ -1,0 +1,38 @@
+{
+    "name": "theatrecms/tessitura",
+    "description": "Syncs Tessitura seasons and performances into TheatreCMS events.",
+    "type": "theatrecms-plugin",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": ">=8.4",
+        "theatrecms/theatrecms": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5",
+        "phpstan/phpstan": "^2.0",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TheatreCMS/theatrecms"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TheatreCMS\\Tessitura\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TheatreCMS\\Tessitura\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "theatrecms": {
+            "plugin": "TheatreCMS\\Tessitura\\Plugin"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
